@@ -24,11 +24,11 @@ AForm::AForm(const std::string n, const int g_s, const int g_e)
 	std::cout << "AForm Parametrized Constructor.\n";
 	if (grade_sign <= 0 || grade_execute <= 0)
 	{
-		throw(std::logic_error("AForm::GradeTooHighException"));
+		throw(AForm::GradeTooHighException());
 	}
 	else if (grade_sign > 150 || grade_execute > 150)
 	{
-		throw (std::logic_error("AForm::GradeTooLowException"));
+		throw(AForm::GradeTooLowException());
 	}
 }
 
@@ -62,7 +62,7 @@ void	AForm::beSigned(Bureaucrat &b)
 	if (b.getGrade() <= grade_sign)
 		s = 1;
 	else
-		throw(std::logic_error("AForm::GradeTooLowException"));
+		throw(AForm::GradeTooLowException());
 }
 
 void	AForm::execute(Bureaucrat const & executor) const
@@ -73,7 +73,7 @@ void	AForm::execute(Bureaucrat const & executor) const
 	}
 	else
 	{
-		throw(std::logic_error("Bureaucrat::NoExecutionCapability"));
+		throw(AForm::GradeTooLowException());
 	}
 }
 

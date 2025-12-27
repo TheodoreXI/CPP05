@@ -26,6 +26,20 @@ class AForm
 		void				beSigned(Bureaucrat &b);
 		void				execute(Bureaucrat const & executor) const;
 		virtual void		executeAction(void) const = 0 ;
+		class GradeTooHighException : public std::exception
+		{
+			const char *what() const throw()
+			{
+				return "Grade too high.";
+			}
+		};
+		class GradeTooLowException : public std::exception
+		{
+			const char *what() const throw()
+			{
+				return "Grade too low.";
+			}
+		};
 
 
 };

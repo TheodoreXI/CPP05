@@ -24,11 +24,11 @@ Form::Form(const std::string n, const int g_s, const int g_e)
 	std::cout << "Form Parametrized Constructor.\n";
 	if (grade_sign <= 0 || grade_execute <= 0)
 	{
-		throw(Bureaucrat::GradeTooHighException());
+		throw(Form::GradeTooHighException());
 	}
 	else if (grade_sign > 150 || grade_execute > 150)
 	{
-		throw(Bureaucrat::GradeTooLowException());
+		throw(Form::GradeTooLowException());
 	}
 }
 
@@ -62,6 +62,6 @@ void		Form::beSigned(Bureaucrat &b)
 	if (b.getGrade() <= grade_sign)
 		s = 1;
 	else
-		throw(Bureaucrat::GradeTooLowException());
+		throw(Form::GradeTooLowException());
 }
 

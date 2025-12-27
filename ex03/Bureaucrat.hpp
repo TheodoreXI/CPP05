@@ -23,6 +23,20 @@ class Bureaucrat
 		void	derement_grade(void);
 		void	signForm(AForm &obj);
 		void	executeForm(AForm const & form) const;
+		class GradeTooHighException : public std::exception
+		{
+			const char *what() const throw()
+			{
+				return "Grade too high.";
+			}
+		};
+		class GradeTooLowException : public std::exception
+		{
+			const char *what() const throw()
+			{
+				return "Grade too low.";
+			}
+		};
 };
 
 std::ostream	&operator<<(std::ostream &os, const Bureaucrat &obj); 
