@@ -22,6 +22,7 @@ Bureaucrat::Bureaucrat(int val, const std::string n)
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat &obj)
+	:name(obj.name)
 {
 	*this = obj;
 }

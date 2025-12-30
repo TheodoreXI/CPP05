@@ -9,8 +9,7 @@ int main()
 	try
 	{
 		Intern intern;
-		B	j.signForm(*form);
-		j.executeForm(*form);
+		Bureaucrat j;
 		// ShrubberyCreationForm	A("target");
 		// RobotomyRequestForm  	B("target");
 		// PresidentialPardonForm	C("target");
@@ -18,7 +17,8 @@ int main()
 		// j.executeForm(A);
 		// j.sigureaucrat				j(2, "Jeff");
 		AForm* form = intern.makeForm("robotomy request", "Bender");
-	nForm(B);
+		j.signForm(*form);
+		j.executeForm(*form);
 		// j.executeForm(B);
 		// j.signForm(C);
 		// j.executeForm(C);

@@ -21,8 +21,8 @@ class Form
 		Form &operator=(const Form &obj);
 		std::string			getName(void);
 		bool				getS(void);
-		int			getGrade_sign();
-		int			getGrade_exec();
+		int					getGrade_sign(void);
+		int					getGrade_exec(void);
 		void				beSigned(Bureaucrat &b);
 		class GradeTooHighException : public std::exception
 		{

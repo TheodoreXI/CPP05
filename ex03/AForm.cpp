@@ -12,7 +12,7 @@ AForm::~AForm(void)
 }
 
 AForm::AForm(const AForm &obj)
-	:name(obj.name), s(obj.s), grade_sign(obj.grade_sign), grade_execute(obj.grade_execute)
+	:name(obj.name), grade_sign(obj.grade_sign), grade_execute(obj.grade_execute)
 {
 	std::cout << "AForm copy constructor called.\n";
 	*this = obj;
@@ -34,8 +34,8 @@ AForm::AForm(const std::string n, const int g_s, const int g_e)
 
 AForm &AForm::operator=(const AForm &obj)
 {
-	(void)obj;
-	return (*this);//still needs to check
+	this->s = obj.s;
+	return (*this);
 }
 
 std::string	AForm::getName(void) const

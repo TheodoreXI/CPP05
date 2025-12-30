@@ -12,7 +12,7 @@ Form::~Form(void)
 }
 
 Form::Form(const Form &obj)
-	:name("B_form"), s(0), grade_sign(0), grade_execute(0)
+	:name(obj.name), grade_sign(obj.grade_sign), grade_execute(obj.grade_execute)
 {
 	std::cout << "Form copy constructor called.\n";
 	*this = obj;
@@ -34,8 +34,8 @@ Form::Form(const std::string n, const int g_s, const int g_e)
 
 Form &Form::operator=(const Form &obj)
 {
-	(void)obj;
-	return (*this);//still needs to check
+	this->s = obj.s;
+	return (*this);
 }
 
 std::string	Form::getName(void)

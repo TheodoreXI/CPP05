@@ -25,7 +25,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &obj
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &obj)
 {
-	(void)obj;//need to work on it later
+	this->target = obj.target;
 	std::cout << "PresidentialPardonForm copy assignement operator.\n";
 	return (*this);
 
@@ -35,8 +35,3 @@ void	PresidentialPardonForm::executeAction(void) const
 {
 	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox.\n";
 }
-
-// void		PresidentialPardonForm::execute(Bureaucrat const & executor) const
-// {
-	
-// }

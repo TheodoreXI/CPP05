@@ -12,16 +12,17 @@ Bureaucrat::Bureaucrat(int val, const std::string n)
 	std::cout << "Bureaucrat Parametrized Constructor.\n";
 	if (val <= 0)
 	{
-		throw(std::logic_error("Bureaucrat::GradeTooHighException"));
+		throw(Bureaucrat::GradeTooHighException());
 	}
 	else if (val > 150)
 	{
-		throw (std::logic_error("Bureaucrat::GradeTooLowException"));
+		throw(Bureaucrat::GradeTooLowException());
 	}
 	grade = val;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat &obj)
+	:name(obj.name)
 {
 	*this = obj;
 }
@@ -52,7 +53,7 @@ void	Bureaucrat::increment_grade(void)
 	grade--;
 	if (grade <= 0)
 	{
-		throw(std::logic_error("Bureaucrat::GradeTooHighException"));
+		throw(Bureaucrat::GradeTooHighException());
 	}
 }
 
@@ -61,7 +62,7 @@ void	Bureaucrat::derement_grade(void)
 	grade++;
 	if (grade > 150)
 	{
-		throw (std::logic_error("Bureaucrat::GradeTooLowException"));
+		throw(Bureaucrat::GradeTooLowException());
 	}
 }
 
@@ -94,7 +95,7 @@ void	Bureaucrat::executeForm(AForm const & form) const
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << this->getName() << " couldn't execute " << form.getName() << " bcause "<<  e.what() << ".\n";
+		std::cout << this->getName() << " couldn't execute " << form.getName() << " because "<<  e.what() << ".\n";
 	}
 
 }

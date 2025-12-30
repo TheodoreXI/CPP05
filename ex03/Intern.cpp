@@ -25,8 +25,7 @@ AForm	*Intern::makeForm(const std::string &form_name, const std::string &form_ta
 			return ((this->*func[i])(form_target));
 		}
 	}
-	return (NULL); // must change to throwing exceptions
-	// throw ()
+	return (NULL);
 }
 
 AForm	*Intern::form_president(const std::string &t)

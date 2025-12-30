@@ -26,7 +26,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &obj)
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &obj)
 {
 	std::cout << "ShrubberyCreationForm copy assignement operator.\n";
-	(void)obj; //check for this
+	this->target = obj.target;
 	return (*this);
 
 }
@@ -51,7 +51,3 @@ void	ShrubberyCreationForm::executeAction(void) const
 
 }
 
-// void		ShrubberyCreationForm::execute(Bureaucrat const & executor) const
-// {
-	
-// }

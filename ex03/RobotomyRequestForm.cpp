@@ -25,7 +25,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &obj)
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &obj)
 {
-	(void)obj;//need to work on it later
+	this->target = obj.target;
 	std::cout << "RobotomyRequestForm copy assignement operator.\n";
 	return (*this);
 
@@ -44,8 +44,3 @@ void	RobotomyRequestForm::executeAction(void) const
 		std::cout << "the robotomy failed.\n";
 	}
 }
-
-// void		PresidentialPardonForm::execute(Bureaucrat const & executor) const
-// {
-	
-// }
