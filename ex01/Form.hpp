@@ -19,10 +19,10 @@ class Form
 		~Form(void);
 		Form(const Form &obj);
 		Form &operator=(const Form &obj);
-		std::string			getName(void);
-		bool				getS(void);
-		int					getGrade_sign(void);
-		int					getGrade_exec(void);
+		std::string			getName(void) const;
+		bool				getS(void) const;
+		int					getGrade_sign(void) const;
+		int					getGrade_exec(void) const;
 		void				beSigned(Bureaucrat &b);
 		class GradeTooHighException : public std::exception
 		{

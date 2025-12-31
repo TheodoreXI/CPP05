@@ -35,3 +35,9 @@ void	PresidentialPardonForm::executeAction(void) const
 {
 	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox.\n";
 }
+
+
+std::string	PresidentialPardonForm::getTarget(void)
+{
+	return (target);
+}

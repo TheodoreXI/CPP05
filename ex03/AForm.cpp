@@ -77,3 +77,8 @@ void	AForm::execute(Bureaucrat const & executor) const
 	}
 }
 
+std::ostream	&operator<<(std::ostream &os, const AForm &obj)
+{
+	os << obj.getName() << ", form sign is  " << obj.getGrade_sign() << " and execution grade " << obj.getGrade_exec() << ", this is the boolean sign " << obj.getS() << ".\n";
+	return (os);
+}

@@ -44,3 +44,8 @@ void	RobotomyRequestForm::executeAction(void) const
 		std::cout << "the robotomy failed.\n";
 	}
 }
+
+std::string	RobotomyRequestForm::getTarget(void)
+{
+	return (target);
+}

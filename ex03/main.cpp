@@ -9,21 +9,19 @@ int main()
 	try
 	{
 		Intern intern;
-		Bureaucrat j;
-		// ShrubberyCreationForm	A("target");
-		// RobotomyRequestForm  	B("target");
-		// PresidentialPardonForm	C("target");
-		// j.signForm(A);
-		// j.executeForm(A);
-		// j.sigureaucrat				j(2, "Jeff");
+		Bureaucrat j(55, "jeff");
 		AForm* form = intern.makeForm("robotomy request", "Bender");
+		std::cout << *form;
 		j.signForm(*form);
 		j.executeForm(*form);
-		// j.executeForm(B);
-		// j.signForm(C);
-		// j.executeForm(C);
-
-		// std::cout << B.getGrade() << "\n";
+		form = intern.makeForm("presidential pardon", "Bender");
+		std::cout << *form;
+		j.signForm(*form);
+		j.executeForm(*form);
+		form = intern.makeForm("shrubbery creation", "Bender");
+		std::cout << *form;
+		j.signForm(*form);
+		j.executeForm(*form);
 	/* do some stuff with bureaucrats */
 	}
 	catch (std::exception & e)

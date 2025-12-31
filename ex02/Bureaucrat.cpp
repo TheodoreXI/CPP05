@@ -68,7 +68,7 @@ void	Bureaucrat::derement_grade(void)
 
 std::ostream	&operator<<(std::ostream &os, const Bureaucrat &obj)
 {
-	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".";
+	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".\n";
 	return (os);
 }
 

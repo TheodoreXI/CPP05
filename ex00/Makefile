@@ -1,7 +1,7 @@
 SRCS = main.cpp Bureaucrat.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Bureaucrat
 
 all: $(NAME)
@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $^ -o $@
 
-%.o: %.cpp
+%.o: %.cpp Bureaucrat.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

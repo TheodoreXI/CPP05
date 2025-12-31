@@ -15,7 +15,6 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm(const ShrubberyCreationForm &obj);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &obj);
 		std::string			getTarget(void);
-		void				beSigned(Bureaucrat &b);
 		void				executeAction(void) const;
 };
 

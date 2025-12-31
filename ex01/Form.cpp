@@ -38,21 +38,21 @@ Form &Form::operator=(const Form &obj)
 	return (*this);
 }
 
-std::string	Form::getName(void)
+std::string	Form::getName(void) const
 {
 	return (name);
 }
 
-bool		Form::getS(void)
+bool		Form::getS(void) const
 {
 	return (s);
 }
 
-int	Form::getGrade_sign(void)
+int	Form::getGrade_sign(void) const
 {
 	return (grade_sign);
 }
-int	Form::getGrade_exec(void)
+int	Form::getGrade_exec(void) const
 {
 	return (grade_execute);
 }
@@ -63,5 +63,11 @@ void		Form::beSigned(Bureaucrat &b)
 		s = 1;
 	else
 		throw(Form::GradeTooLowException());
+}
+
+std::ostream	&operator<<(std::ostream &os, const Form &obj)
+{
+	os << obj.getName() << ", form sign is  " << obj.getGrade_sign() << " and execution grade " << obj.getGrade_exec() << ", this is the boolean sign " << obj.getS() << ".\n";
+	return (os);
 }
 

@@ -11,6 +11,10 @@ int main()
 		ShrubberyCreationForm	A("target");
 		RobotomyRequestForm  	B("target");
 		PresidentialPardonForm	C("target");
+		std::cout << j;
+		std::cout << A;
+		std::cout << B;
+		std::cout << C;
 		j.signForm(A);
 		j.executeForm(A);
 		j.signForm(B);

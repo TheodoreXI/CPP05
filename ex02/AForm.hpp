@@ -40,8 +40,6 @@ class AForm
 				return "Grade too low.";
 			}
 		};
-
-
 };
 
 std::ostream	&operator<<(std::ostream &os, const AForm &obj);

@@ -17,7 +17,7 @@ class Bureaucrat
 		int					getGrade(void) const;
 		Bureaucrat(int val, const std::string n);
 		void	increment_grade(void);
-		void	derement_grade(void);
+		void	decrement_grade(void);
 		class GradeTooHighException : public std::exception
 		{
 			const char *what() const throw()

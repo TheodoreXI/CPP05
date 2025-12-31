@@ -4,14 +4,15 @@ int main()
 {
 	try
 	{
-		// Bureaucrat B(2, "bib");
-		// Bureaucrat A(6, "jeff");
-		// Form f("jeff", 5, 10);
-		// A.signForm(f);
-		// B.signForm(f);
-		Form f("jeff", 5, 10);
-		Form a(f);
-		std::cout << a.getName() << " " << a.getS() << " " << a.getGrade_sign() << " " << a.getGrade_exec() << "\n";
+		Bureaucrat B(2, "bib");
+		Bureaucrat A(6, "jeff");
+		Form f("ragg", 5, 10);
+		// Form k("kate", -1, 10);
+		std::cout << A;
+		std::cout << B;
+		std::cout << f;
+		A.signForm(f);
+		B.signForm(f);
 	/* do some stuff with bureaucrats */
 	}
 	catch (std::exception & e)

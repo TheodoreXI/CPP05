@@ -13,7 +13,7 @@ class Intern
 		Intern(void);
 		~Intern(void);
 		Intern(const Intern &obj);
-		Intern &operator=(Intern &obj);
+		Intern &operator=(const Intern &obj);
 		AForm	*makeForm(const std::string &form_name, const std::string &form_target);
 		AForm	*form_president(const std::string &t);
 		AForm	*form_robot(const std::string &t);

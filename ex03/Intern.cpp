@@ -11,6 +11,18 @@ Intern::~Intern(void)
 	std::cout << "Intern Destructor called.\n";
 }
 
+Intern::Intern(const Intern &obj)
+{
+	std::cout << "Intern Copy Constructor called.\n";
+	*this = obj;
+}
+
+Intern &Intern::operator=(const Intern &obj)
+{
+	(void)obj;
+	return (*this);
+}
+
 AForm	*Intern::makeForm(const std::string &form_name, const std::string &form_target)
 {
 	std::string values[] = {"presidential pardon", "robotomy request", "shrubbery creation"};

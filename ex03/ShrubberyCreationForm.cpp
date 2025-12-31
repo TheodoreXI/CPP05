@@ -51,3 +51,7 @@ void	ShrubberyCreationForm::executeAction(void) const
 
 }
 
+std::string	ShrubberyCreationForm::getTarget(void)
+{
+	return (target);
+}
