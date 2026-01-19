@@ -1,7 +1,7 @@
 #include "Form.hpp"
 
 Form::Form(void)
-	:name("B_form"), s(0), grade_sign(0), grade_execute(0)
+	:name("B_form"), s(0), grade_sign(150), grade_execute(150)
 {
 	std::cout << "Form Default Constructor called.\n";
 }

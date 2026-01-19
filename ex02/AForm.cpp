@@ -1,7 +1,7 @@
 #include "AForm.hpp"
 
 AForm::AForm(void)
-	:name("B_Aform"), s(0), grade_sign(0), grade_execute(0)
+	:name("B_Aform"), s(0), grade_sign(150), grade_execute(150)
 {
 	std::cout << "AForm Default Constructor called.\n";
 }

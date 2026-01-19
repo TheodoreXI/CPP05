@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat(void)
-	:name("Jeff"), grade(0)
+	:name("Jeff"), grade(150)
 {
 	std::cout << "Bureaucrat Defaut Constructor.\n";
 }
@@ -82,6 +82,6 @@ void	Bureaucrat::signForm(Form &obj)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << this->getName() << " couldn't sign " << obj.getName() << " bcause "<<  e.what() << '\n';
+		std::cerr << this->getName() << " couldn't sign " << obj.getName() << " bcause "<<  e.what() << '\n';
 	}
 }

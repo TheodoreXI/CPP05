@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat(void)
-	:name("Jeff"), grade(0)
+	:name("Jeff"), grade(150)
 {
 	std::cout << "Bureaucrat Defaut Constructor.\n";
 }
