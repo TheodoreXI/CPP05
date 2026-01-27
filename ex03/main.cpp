@@ -4,30 +4,34 @@
 #include "ShrubberyCreationForm.hpp"
 #include "Intern.hpp"
 
+
 int main()
 {
+	AForm* form;
 	try
 	{
 		Intern intern;
 		Bureaucrat j(55, "jeff");
-		AForm* form = intern.makeForm("robotomy request", "Bender");
+		form = intern.makeForm("robotomy request", "Bender");
 		std::cout << *form;
 		j.signForm(*form);
 		j.executeForm(*form);
+		delete form;
 		form = intern.makeForm("presidential pardon", "Bender");
 		std::cout << *form;
 		j.signForm(*form);
 		j.executeForm(*form);
+		delete form;
 		form = intern.makeForm("shrubbery creation", "Bender");
 		std::cout << *form;
 		j.signForm(*form);
 		j.executeForm(*form);
-	/* do some stuff with bureaucrats */
+		delete form;
 	}
 	catch (std::exception & e)
 	{
-		std::cerr << e.what() << "\n";
-	/* handle exception */
+		std::cout << e.what() << "\n";
+		// delete form;
 	}
 
 }

@@ -23,6 +23,11 @@ Intern &Intern::operator=(const Intern &obj)
 	return (*this);
 }
 
+const char *Intern::InternExcept::what() const throw()
+{
+	return "Not a valid form.";
+}
+
 AForm	*Intern::makeForm(const std::string &form_name, const std::string &form_target)
 {
 	std::string values[] = {"presidential pardon", "robotomy request", "shrubbery creation"};
@@ -37,6 +42,7 @@ AForm	*Intern::makeForm(const std::string &form_name, const std::string &form_ta
 			return ((this->*func[i])(form_target));
 		}
 	}
+	throw (Intern::InternExcept());
 	return (NULL);
 }
 

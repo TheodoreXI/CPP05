@@ -18,6 +18,11 @@ class Intern
 		AForm	*form_president(const std::string &t);
 		AForm	*form_robot(const std::string &t);
 		AForm	*form_shrub(const std::string &t);
+		class InternExcept : public std::exception
+		{
+			public:
+				const char *what() const throw();
+		};
 
 };
 

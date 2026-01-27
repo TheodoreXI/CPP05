@@ -36,6 +36,7 @@ void	ShrubberyCreationForm::executeAction(void) const
 	std::string		f;
 	f = this->target + "_shrubbery";
 	std::ofstream	my_out(f);
+	//isopen check it then throw runtime exception
 	my_out << "	              v .   ._, |_  .,\n";
 	my_out << "           `-._//  .  / /    |/_\n";
 	my_out << "               \\  _/, y | ///\n";

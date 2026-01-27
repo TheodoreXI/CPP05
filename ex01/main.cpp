@@ -13,12 +13,10 @@ int main()
 		std::cout << f;
 		A.signForm(f);
 		B.signForm(f);
-	/* do some stuff with bureaucrats */
 	}
 	catch (std::exception & e)
 	{
 		std::cout << e.what() << "\n";
-	/* handle exception */
 	}
 
 }

@@ -48,7 +48,6 @@ void	ShrubberyCreationForm::executeAction(void) const
 	my_out << "                     |   =|\n";
 	my_out << "                     |    |\n";
 	my_out << "--------------------/ ,  . /--------._\n";
-
 }
 
 std::string	ShrubberyCreationForm::getTarget(void)

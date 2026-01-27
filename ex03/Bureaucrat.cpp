@@ -82,7 +82,7 @@ void	Bureaucrat::signForm(AForm &obj)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << this->getName() << " couldn't sign " << obj.getName() << " bcause "<<  e.what() << '\n';
+		std::cout << this->getName() << " couldn't sign " << obj.getName() << " bcause "<<  e.what() << '\n';
 	}
 }
 
@@ -95,7 +95,16 @@ void	Bureaucrat::executeForm(AForm const & form) const
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << this->getName() << " couldn't execute " << form.getName() << " because "<<  e.what() << ".\n";
+		std::cout << this->getName() << " couldn't execute " << form.getName() << " because "<<  e.what() << ".\n";
 	}
+}
 
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade too high.";
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade too low.";
 }

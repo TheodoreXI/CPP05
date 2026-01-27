@@ -20,17 +20,13 @@ class Bureaucrat
 		void	decrement_grade(void);
 		class GradeTooHighException : public std::exception
 		{
-			const char *what() const throw()
-			{
-				return "Grade too high.";
-			}
+			public:
+				const char *what() const throw();
 		};
 		class GradeTooLowException : public std::exception
 		{
-			const char *what() const throw()
-			{
-				return "Grade too low.";
-			}
+			public:
+				const char *what() const throw();
 		};
 
 };

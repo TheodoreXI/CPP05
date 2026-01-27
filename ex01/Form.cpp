@@ -71,3 +71,13 @@ std::ostream	&operator<<(std::ostream &os, const Form &obj)
 	return (os);
 }
 
+const char *Form::GradeTooHighException::what() const throw()
+{
+	return "Grade too high.";
+}
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+	return "Grade too low.";
+}
+
