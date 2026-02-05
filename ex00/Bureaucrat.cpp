@@ -36,7 +36,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat &obj)
 Bureaucrat::~Bureaucrat(void)
 {
 	std::cout << "Bureaucrat Destructor.\n";
-
+	throw -1;
 }
 const std::string	&Bureaucrat::getName(void) const
 {
