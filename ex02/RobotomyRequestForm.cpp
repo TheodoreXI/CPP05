@@ -33,7 +33,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 void	RobotomyRequestForm::executeAction(void) const
 {
-	std::srand(std::time(NULL));
+	srand(time(NULL));
 	std::cout << "Baaaaaaaaaa\n";
 	if (rand() % 2)
 	{

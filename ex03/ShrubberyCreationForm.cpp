@@ -35,7 +35,7 @@ void	ShrubberyCreationForm::executeAction(void) const
 {
 	std::string		f;
 	f = this->target + "_shrubbery";
-	std::ofstream	my_out(f);
+	std::ofstream	my_out(f.c_str());
 	if (!my_out.is_open())
 		throw (std::runtime_error("File not opened."));
 	my_out << "	              v .   ._, |_  .,\n";
